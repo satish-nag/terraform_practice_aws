@@ -87,14 +87,14 @@ resource "aws_security_group" "myec2-SG" {
   }
   ingress {
     cidr_blocks = ["0.0.0.0/0"]
-    from_port = 0
+    from_port = 22
     protocol  = "TCP"
     to_port   = 22
     description = "Allow SSH from anywhere"
   }
   ingress {
     cidr_blocks = ["0.0.0.0/0"]
-    from_port = 0
+    from_port = 80
     protocol  = "TCP"
     to_port   = 80
     description = "Allow HTTP from anywhere"
