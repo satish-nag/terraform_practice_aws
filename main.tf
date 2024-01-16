@@ -18,8 +18,6 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
-  access_key = "<access_key>"
-  secret_key = "<secret_key>"
   default_tags {
     cost_center: "12345"
   }
@@ -94,7 +92,7 @@ resource "aws_security_group" "myec2-SG" {
   }
   ingress {
     cidr_blocks = ["0.0.0.0/0"]
-    from_port = 80
+    from_port = 80Z
     protocol  = "TCP"
     to_port   = 80
     description = "Allow HTTP from anywhere"
